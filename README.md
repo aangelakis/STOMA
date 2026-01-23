@@ -342,6 +342,7 @@ To replicate the training pipeline, the following toolkits must be installed:
 * **Vocoder:** To train the vocoder, **ParallelWaveGAN** is required. Installation instructions are available in the [ParallelWaveGAN repository](https://github.com/kan-bayashi/ParallelWaveGAN?tab=readme-ov-file#a-use-pip).
   
 ## Training Procedure
+![Training Procedure](images/training.png)
 ### Acoustic Model (FastSpeech2)
 The training process involves a two-stage pipeline: first training a Teacher model (Tacotron2) to extract durations, and then training the Student model (FastSpeech2).
 
