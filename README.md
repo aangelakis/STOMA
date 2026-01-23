@@ -5,6 +5,333 @@ STOMA is a new multi-speaker Greek speech corpus designed to advance research in
 ## Dataset
 The dataset is available at the following location: [TBA]()
 
+<div align="center">
+
+  <strong>Table 1: Text statistics for the full text collection (Greek Harvard, B2, C1, and C2), recorded in its entirety by the two primary speakers.</strong>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Statistic</th>
+        <th>Gr. Harvard</th>
+        <th>B2</th>
+        <th>C1</th>
+        <th>C2</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Total Sentences</td>
+        <td align="center">720</td>
+        <td align="center">1,087</td>
+        <td align="center">1,571</td>
+        <td align="center">1,296</td>
+        <td align="center">4,674</td>
+      </tr>
+      <tr>
+        <td>Total Words</td>
+        <td align="center">5,539</td>
+        <td align="center">15,102</td>
+        <td align="center">25,263</td>
+        <td align="center">22,722</td>
+        <td align="center">68,626</td>
+      </tr>
+      <tr>
+        <td>Total Characters</td>
+        <td align="center">32,301</td>
+        <td align="center">95,119</td>
+        <td align="center">164,700</td>
+        <td align="center">152,904</td>
+        <td align="center">445,024</td>
+      </tr>
+      <tr>
+        <td>Distinct Words</td>
+        <td align="center">3,343</td>
+        <td align="center">5,606</td>
+        <td align="center">8,965</td>
+        <td align="center">8,275</td>
+        <td align="center">20,253</td>
+      </tr>
+      <tr>
+        <td>Mean Words per Sentence</td>
+        <td align="center">7.69</td>
+        <td align="center">13.89</td>
+        <td align="center">16.08</td>
+        <td align="center">17.53</td>
+        <td align="center">14.68</td>
+      </tr>
+      <tr>
+        <td>Min Words per Sentence</td>
+        <td align="center">5</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+        <td align="center">1</td>
+      </tr>
+      <tr>
+        <td>Max Words per Sentence</td>
+        <td align="center">9</td>
+        <td align="center">32</td>
+        <td align="center">41</td>
+        <td align="center">39</td>
+        <td align="center">41</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div align="center">
+
+  <strong>Table 2: Text statistics for the reduced text subset selected from the full collection, used for recordings by the secondary speakers.</strong>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Statistic</th>
+        <th>Gr. Harvard</th>
+        <th>B2</th>
+        <th>C1</th>
+        <th>C2</th>
+        <th>Subset Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Total Sentences</td>
+        <td align="center">720</td>
+        <td align="center">190</td>
+        <td align="center">194</td>
+        <td align="center">197</td>
+        <td align="center">1,301</td>
+      </tr>
+      <tr>
+        <td>Total Words</td>
+        <td align="center">5,539</td>
+        <td align="center">2,913</td>
+        <td align="center">3,057</td>
+        <td align="center">3,265</td>
+        <td align="center">14,774</td>
+      </tr>
+      <tr>
+        <td>Total Characters</td>
+        <td align="center">32,301</td>
+        <td align="center">18,286</td>
+        <td align="center">20,190</td>
+        <td align="center">22,110</td>
+        <td align="center">92,887</td>
+      </tr>
+      <tr>
+        <td>Distinct Words</td>
+        <td align="center">3,343</td>
+        <td align="center">1,519</td>
+        <td align="center">1,604</td>
+        <td align="center">1,676</td>
+        <td align="center">6,899</td>
+      </tr>
+      <tr>
+        <td>Mean Words per Sentence</td>
+        <td align="center">7.69</td>
+        <td align="center">15.33</td>
+        <td align="center">15.76</td>
+        <td align="center">16.57</td>
+        <td align="center">11.36</td>
+      </tr>
+      <tr>
+        <td>Min Words per Sentence</td>
+        <td align="center">5</td>
+        <td align="center">4</td>
+        <td align="center">3</td>
+        <td align="center">4</td>
+        <td align="center">3</td>
+      </tr>
+      <tr>
+        <td>Max Words per Sentence</td>
+        <td align="center">9</td>
+        <td align="center">28</td>
+        <td align="center">28</td>
+        <td align="center">30</td>
+        <td align="center">30</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div align="center">
+
+  <strong>Table 3: Speech statistics of the STOMA corpus per speaker and overall.</strong>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Speaker ID</th>
+        <th>Clips</th>
+        <th>Total Duration</th>
+        <th>Mean Duration (s)</th>
+        <th>Min–Max (s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>F</td>
+        <td align="center">4,674</td>
+        <td align="center">7:46:21</td>
+        <td align="center">5.99</td>
+        <td align="center">0.41–16.60</td>
+      </tr>
+      <tr>
+        <td>M</td>
+        <td align="center">4,674</td>
+        <td align="center">8:53:37</td>
+        <td align="center">6.85</td>
+        <td align="center">0.48–22.31</td>
+      </tr>
+      <tr>
+        <td>F1</td>
+        <td align="center">1,301</td>
+        <td align="center">1:46:58</td>
+        <td align="center">4.93</td>
+        <td align="center">1.65–15.08</td>
+      </tr>
+      <tr>
+        <td>F2</td>
+        <td align="center">1,301</td>
+        <td align="center">1:27:38</td>
+        <td align="center">4.04</td>
+        <td align="center">1.46–11.13</td>
+      </tr>
+      <tr>
+        <td>M1</td>
+        <td align="center">1,301</td>
+        <td align="center">1:47:06</td>
+        <td align="center">4.94</td>
+        <td align="center">1.64–14.99</td>
+      </tr>
+      <tr>
+        <td>M2</td>
+        <td align="center">1,301</td>
+        <td align="center">1:26:43</td>
+        <td align="center">4.00</td>
+        <td align="center">1.10–10.39</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td align="center"><strong>14,552</strong></td>
+        <td align="center"><strong>23:08:26</strong></td>
+        <td align="center"><strong>5.72</strong></td>
+        <td align="center"><strong>0.41–22.31</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<div align="center">
+
+  <strong>Table 4: Demographic information of the STOMA corpus speakers.</strong>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name & Surname</th>
+        <th>Speaker ID</th>
+        <th>Age</th>
+        <th>Sex</th>
+        <th>Region Raised</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">Michail Raptakis</td>
+        <td align="center">M</td>
+        <td align="center">29</td>
+        <td align="center">Male</td>
+        <td align="center">Athens</td>
+      </tr>
+      <tr>
+        <td align="center">Olympia Simantiraki</td>
+        <td align="center">F</td>
+        <td align="center">37</td>
+        <td align="center">Female</td>
+        <td align="center">Heraklion</td>
+      </tr>
+      <tr>
+        <td align="center">Efstratios Selisios</td>
+        <td align="center">M1</td>
+        <td align="center">30</td>
+        <td align="center">Male</td>
+        <td align="center">Alexandroupoli</td>
+      </tr>
+      <tr>
+        <td align="center">Gavriela Koutsikou</td>
+        <td align="center">F1</td>
+        <td align="center">21</td>
+        <td align="center">Female</td>
+        <td align="center">Larisa</td>
+      </tr>
+      <tr>
+        <td align="center">Georgios Goupos</td>
+        <td align="center">M2</td>
+        <td align="center">22</td>
+        <td align="center">Male</td>
+        <td align="center">Larisa</td>
+      </tr>
+      <tr>
+        <td align="center">Anastasia Kechagia</td>
+        <td align="center">F2</td>
+        <td align="center">26</td>
+        <td align="center">Female</td>
+        <td align="center">Athens</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div align="center">
+
+  <strong>Table 5: Audio format specifications of the STOMA corpus recordings.</strong>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>File format</td>
+        <td>WAV (RIFF)</td>
+      </tr>
+      <tr>
+        <td>Encoding</td>
+        <td>Pulse-Code Modulation (PCM)</td>
+      </tr>
+      <tr>
+        <td>Compression</td>
+        <td>None (uncompressed)</td>
+      </tr>
+      <tr>
+        <td>Channels</td>
+        <td>1 (mono)</td>
+      </tr>
+      <tr>
+        <td>Sampling rate</td>
+        <td>44.1 kHz</td>
+      </tr>
+      <tr>
+        <td>Bit depth</td>
+        <td>16-bit signed integer</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
 ## Requirements
 
 The training framework employs the **ESPnet** toolkit for acoustic modeling (FastSpeech2) and **ParallelWaveGAN** for the vocoder (HiFi-GAN).
