@@ -16,6 +16,7 @@
 # e.g. "echo JOB" is changed to "echo 3" for the 3rd job and "echo 8" for 8th job respectively.
 # Note that the number must start with a positive number, so you can't use "JOB=0:10" for example.
 #
+# run.pl, queue.pl, slurm.pl, and ssh.pl have unified interface, not depending on its backend.
 # These options are mapping to specific options for each backend and
 # it is configured by "conf/queue.conf" and "conf/slurm.conf" by default.
 # If jobs failed, your configuration might be wrong for your environment.
