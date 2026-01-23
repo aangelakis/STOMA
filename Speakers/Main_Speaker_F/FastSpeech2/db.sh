@@ -1,7 +1,7 @@
 # Set the path of your corpus
 # "downloads" means the corpus can be downloaded by the recipe automatically
 
-export GSD=/home/mrap/STOMA_22050
+export GSD=/home/mrap/STOMA_22050 # Change this to your actual base directory path where the corpora are stored
 ACCENTED_FR=downloads
 ACCENT_DB=
 ACESINGER=downloads
