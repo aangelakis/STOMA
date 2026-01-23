@@ -60,7 +60,7 @@ To initiate vocoder training, please refer to the standard ESPnet2 recipe instru
 
 ***Permission Denied Errors***: If you encounter a "Permission Denied" error, please grant execution rights to the relevant files using the following command:
 ```bash
-chmod u+x file
+chmod u+x <filename>
 ```
 
 ## Inference Procedure
