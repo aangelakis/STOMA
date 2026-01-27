@@ -3,7 +3,7 @@
 STOMA is a new multi-speaker Greek speech corpus designed to advance research in text-to-speech (TTS) synthesis and related speech technologies for under-resourced languages. The corpus comprises approximately 23 hours of professionally recorded read speech from six native speakers (three male and three female), captured under controlled studio conditions using a dual-booth setup to ensure acoustic consistency and high signal quality. The spoken material was selected from the Text Bank of the Center for the Greek Language, specifically from texts corresponding to the B2, C1, and C2 proficiency levels of the Certification of Attainment in Greek, ensuring linguistically rich and pedagogically balanced content. All recordings were standardized to 44.1 kHz, 16-bit mono PCM format and processed through a hybrid quality control pipeline combining automated normalization and manual verification. To assess dataset quality, we trained state-of-the-art neural TTS systems based on the FastSpeech2 acoustic model and the HiFi-GAN vocoder, achieving natural and intelligible synthesized speech. The resulting corpus provides a publicly accessible, high-quality resource that supports both linguistic research and the development of modern speech synthesis systems in Greek.
 
 ## Dataset
-The dataset is available at the following location: [TBA]()
+The dataset is available at the following location: [STOMA](https://huggingface.co/datasets/aangelakis/STOMA)
 
 <div align="center">
 
