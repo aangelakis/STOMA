@@ -415,8 +415,6 @@ Before executing the script, ensure the following:
     * `pitch_normalize_conf` → `pitch_stats.npz`
     * `energy_normalize_conf` → `energy_stats`
 
-    *Note: Locations for pretrained model statistics will be announced soon.*
-
 ### Execution
 Run the inference script as follows:
 ```bash
@@ -424,7 +422,14 @@ python inference.py --text "Αυτή είναι μία καινούρια βάσ
 ```
 
 ## Pretrained model weights
-TBA 
+If you would like access to our pretrained models, please contact us.
+
+## References
+- [**Michail Raptakis**](mrap@csd.uoc.gr) - (University of Crete, IACM-FORTH)
+- [**Alexandros Angelakis**](angelakis@csd.uoc.gr) - (University of Crete, IACM-FORTH)
+
+## Citation
+TBA
 
 ## License
 **Only** the speech dataset, is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
