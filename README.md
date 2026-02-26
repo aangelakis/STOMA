@@ -425,8 +425,8 @@ python inference.py --text "Αυτή είναι μία καινούρια βάσ
 If you would like access to our pretrained models, please contact us.
 
 ## References
-- [**Michail Raptakis**](mrap@csd.uoc.gr) - (University of Crete, IACM-FORTH)
-- [**Alexandros Angelakis**](angelakis@csd.uoc.gr) - (University of Crete, IACM-FORTH)
+- [**Michail Raptakis**](mailto:mrap@csd.uoc.gr) - (University of Crete, IACM-FORTH)
+- [**Alexandros Angelakis**](mailto:angelakis@csd.uoc.gr) - (University of Crete, IACM-FORTH)
 
 ## Citation
 TBA
