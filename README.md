@@ -228,15 +228,82 @@ The dataset is available at the following location: [STOMA](https://huggingface.
 
 </div>
 
-
 <div align="center">
 
-  <strong>Table 4: Demographic information of the STOMA corpus speakers.</strong>
+  <strong>Table 4: Speaker-specific acoustic characteristics of the STOMA corpus. SR: average speech rate (syllables/s, including pauses); AR: average articulation rate (syllables/s, excluding pauses); ASD: average syllable duration (s), computed across all utterances per speaker.</strong>
 
   <table>
     <thead>
       <tr>
-        <th>Name & Surname</th>
+        <th>Speaker ID</th>
+        <th>Mean F0 (Hz)</th>
+        <th>Std F0 (Hz)</th>
+        <th>SR</th>
+        <th>AR</th>
+        <th>ASD (s)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">M</td>
+        <td align="center">118.73</td>
+        <td align="center">20.80</td>
+        <td align="center">4.143</td>
+        <td align="center">4.286</td>
+        <td align="center">0.236</td>
+      </tr>
+      <tr>
+        <td align="center">F</td>
+        <td align="center">195.53</td>
+        <td align="center">40.16</td>
+        <td align="center">4.462</td>
+        <td align="center">4.662</td>
+        <td align="center">0.218</td>
+      </tr>
+      <tr>
+        <td align="center">M1</td>
+        <td align="center">128.30</td>
+        <td align="center">23.34</td>
+        <td align="center">4.165</td>
+        <td align="center">4.403</td>
+        <td align="center">0.230</td>
+      </tr>
+      <tr>
+        <td align="center">F1</td>
+        <td align="center">200.93</td>
+        <td align="center">23.57</td>
+        <td align="center">3.887</td>
+        <td align="center">3.974</td>
+        <td align="center">0.257</td>
+      </tr>
+      <tr>
+        <td align="center">M2</td>
+        <td align="center">109.33</td>
+        <td align="center">15.49</td>
+        <td align="center">4.407</td>
+        <td align="center">4.527</td>
+        <td align="center">0.225</td>
+      </tr>
+      <tr>
+        <td align="center">F2</td>
+        <td align="center">187.29</td>
+        <td align="center">26.88</td>
+        <td align="center">4.238</td>
+        <td align="center">4.409</td>
+        <td align="center">0.232</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div align="center">
+
+  <strong>Table 5: Demographic information of the STOMA corpus speakers.</strong>
+
+  <table>
+    <thead>
+      <tr>
         <th>Speaker ID</th>
         <th>Age</th>
         <th>Sex</th>
@@ -245,42 +312,36 @@ The dataset is available at the following location: [STOMA](https://huggingface.
     </thead>
     <tbody>
       <tr>
-        <td align="center">Michail Raptakis</td>
         <td align="center">M</td>
         <td align="center">29</td>
         <td align="center">Male</td>
         <td align="center">Athens</td>
       </tr>
       <tr>
-        <td align="center">Olympia Simantiraki</td>
         <td align="center">F</td>
         <td align="center">37</td>
         <td align="center">Female</td>
-        <td align="center">Heraklion</td>
+        <td align="center">Crete</td>
       </tr>
       <tr>
-        <td align="center">Efstratios Selisios</td>
         <td align="center">M1</td>
         <td align="center">30</td>
         <td align="center">Male</td>
         <td align="center">Alexandroupoli</td>
       </tr>
       <tr>
-        <td align="center">Gavriela Koutsikou</td>
         <td align="center">F1</td>
         <td align="center">21</td>
         <td align="center">Female</td>
         <td align="center">Larisa</td>
       </tr>
       <tr>
-        <td align="center">Georgios Goupos</td>
         <td align="center">M2</td>
         <td align="center">22</td>
         <td align="center">Male</td>
         <td align="center">Larisa</td>
       </tr>
       <tr>
-        <td align="center">Anastasia Kechagia</td>
         <td align="center">F2</td>
         <td align="center">26</td>
         <td align="center">Female</td>
@@ -293,7 +354,7 @@ The dataset is available at the following location: [STOMA](https://huggingface.
 
 <div align="center">
 
-  <strong>Table 5: Audio format specifications of the STOMA corpus recordings.</strong>
+  <strong>Table 6: Audio format specifications of the STOMA corpus recordings.</strong>
 
   <table>
     <thead>
