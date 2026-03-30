@@ -488,6 +488,7 @@ If you would like access to our pretrained models, please contact us.
 
 ## References
 - **Michail Raptakis** - mrap@csd.uoc.gr (University of Crete, IACM-FORTH)
+- **Yannis Pantazis** - pantazis@iacm.forth.gr (IACM-FORTH)
 - **Alexandros Angelakis** - angelakis@csd.uoc.gr (University of Crete, IACM-FORTH)
 
 ## Citation
