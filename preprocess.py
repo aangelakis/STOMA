@@ -4,30 +4,32 @@ import matplotlib.pyplot as plt
 
 ### Global Dataset Audio Parameters: ###
 datatype = np.int16
-maxrange = np.iinfo(datatype).max
+info = np.iinfo(datatype)
+maxrange = info.max
 gsd_params = wave._wave_params(
     # Single channel (mono)
-    nchannels = 1,
+    nchannels=1,
     # Sample width = 2 bytes (16-bit signed int)
-    sampwidth = 2,
-    framerate = 44100,
+    sampwidth=2,
+    framerate=44100,
     # Number of frames do not matter
-    nframes = 'any',
+    nframes='any',
     # Compression = None (PCM WAV)
-    comptype = 'NONE',
-    compname = 'not compressed'
+    comptype='NONE',
+    compname='not compressed'
 )
 gsd_params_dict = gsd_params._asdict()
+
 ### Preprocessing Hyperparameters: ###
-EPSILON = 0.01
 MIN_LEN_SEC = 0.3
 MIN_PEAK = 10
 ENERGY_THRESHOLD = 1e7
 CHUNK_LEN_SEC = 0.1
+TARGET_PEAK_RATIO = 0.99
 
 # def rename_wav(wav_path, newname):
 #     dirname, filename = os.path.split(wav_path)
-
+#
 #     rest_of_name = filename[len("Greek-"):]
 #     new_name = f"{newname}-{rest_of_name}"
 #     new_wav_path = os.path.join(dirname, new_name)
@@ -51,6 +53,7 @@ def process_wav(wav_path):
     try:
         with wave.open(wav_path, 'rb') as wav:
             params = wav.getparams()
+
             # Checking that we get the expected audio parameters:
             if not params_match(params):
                 print(
@@ -59,50 +62,54 @@ def process_wav(wav_path):
                     f"\nGot:      {params}"
                 )
                 return trimmed_sec
-            
+
             # Extract audio from WAV:
             frames = wav.readframes(params.nframes)
-            audio = np.frombuffer(frames, dtype=datatype)
+            audio = np.frombuffer(frames, dtype=datatype).astype(np.float64)
+
             if len(audio) < MIN_LEN_SEC * params.framerate:
                 print(f"{wav_path}: Very short audio, skipping.")
                 return trimmed_sec
-            
+
             # Remove DC component:
-            audio = audio - np.mean(audio)
+            audio -= np.mean(audio)
+
             # Normalize to near full dynamic range:
             peak = np.max(np.abs(audio))
             if peak < MIN_PEAK:
                 print(f"{wav_path}: Too quiet, skipping.")
                 return trimmed_sec
-            audio = (audio / (peak - EPSILON)) * maxrange
 
-            # Trim beggining silence:
+            target_peak = TARGET_PEAK_RATIO * maxrange
+            audio *= target_peak / peak
+
+            # Trim beginning silence:
             step = int(CHUNK_LEN_SEC * gsd_params.framerate)
             iters = int(len(audio) // step)
             curr = 0
             for _ in range(iters):
-                energy = np.sum(audio[curr:curr+step]**2)
+                energy = np.sum(audio[curr:curr + step] ** 2)
                 if energy > ENERGY_THRESHOLD:
                     break
                 curr += step
-            crop_start = max(0, curr - 2*step)
+            crop_start = max(0, curr - 2 * step)
 
             # Trim trailing silence:
             curr = len(audio)
             for _ in range(iters):
-                energy = np.sum(audio[curr-step:curr]**2)
+                energy = np.sum(audio[curr - step:curr] ** 2)
                 if energy > ENERGY_THRESHOLD:
                     break
                 curr -= step
-            crop_end = min(len(audio), curr + 2*step)
+            crop_end = min(len(audio), curr + 2 * step)
 
             # Visualize audio cropping:
             # timeaxis = np.arange(len(audio)) / gsd_params.framerate
             # plt.figure()
             # plt.title(wav_path)
             # plt.plot(timeaxis, audio)
-            # plt.axvline(x=crop_start/gsd_params.framerate, color='red')
-            # plt.axvline(x=crop_end/gsd_params.framerate, color='red')
+            # plt.axvline(x=crop_start / gsd_params.framerate, color='red')
+            # plt.axvline(x=crop_end / gsd_params.framerate, color='red')
             # plt.xlabel("Time (s)")
             # plt.ylabel("Amplitude")
             # plt.tight_layout()
@@ -110,14 +117,14 @@ def process_wav(wav_path):
             # plt.close()
 
             if crop_start < crop_end:
-                trimmed_sec += (crop_start + len(audio) - crop_end) / gsd_params.framerate 
+                trimmed_sec += (crop_start + len(audio) - crop_end) / gsd_params.framerate
                 audio = audio[crop_start:crop_end]
             else:
                 print(f"{wav_path}: Crop range invalid, skipping silence trimming.")
 
-        audio = audio.astype(datatype)
+        audio = np.clip(audio, info.min, info.max).astype(datatype)
         processed_audio = audio.tobytes()
-        
+
         with wave.open(wav_path, 'wb') as wav:
             wav.setnchannels(params.nchannels)
             wav.setsampwidth(params.sampwidth)
@@ -148,19 +155,20 @@ if __name__ == '__main__':
     start = time.perf_counter()
     wavs_total = 0
     trimmed_sec = 0
+
     for root, dirs, files in os.walk(start_folder):
         for file in files:
             if file.lower().endswith('.wav'):
             # if file.lower().endswith('.wav') and file.startswith("Greek-"):
                 # rename_wav(
-                #     wav_path=os.path.join(root, file), 
+                #     wav_path=os.path.join(root, file),
                 #     newname="GS-M"
                 # )
                 # continue
                 full_wav_path = os.path.join(root, file)
                 trimmed_sec += process_wav(full_wav_path)
                 wavs_total += 1
-    
+
     end = time.perf_counter()
     elapsed = end - start
     print(
