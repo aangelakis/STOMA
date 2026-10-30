@@ -494,5 +494,14 @@ If you would like access to our pretrained models, please contact us.
 ## Citation
 TBA
 
-## License
-**Only** the speech dataset, is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
+## Licence
+
+The STOMA speech corpus, comprising the audio recordings, speaker metadata and
+annotations created by the authors, is released under the Creative Commons
+Attribution 4.0 International (CC BY 4.0) License:
+https://creativecommons.org/licenses/by/4.0/
+
+**This licence does not apply to third-party textual material.** Text originating
+from third-party sources, including the CGL Text Bank, is not relicensed
+under CC BY 4.0 and remains subject to the rights and usage conditions of its
+original source. Users are responsible for complying with those conditions.
