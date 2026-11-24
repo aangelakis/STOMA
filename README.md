@@ -494,7 +494,7 @@ If you would like access to our pretrained models, please contact us.
 ## Citation
 ```bibtex
 @article{raptakis2026stoma,
-author = {Raptakis, Michail and Mountzouri, Stavroula and Giannaros, Christos and Kechagia, Anastasia and Simantiraki, Olympia and Angelakis, Alexandros and Pantazis, Yannis and Kafentzis, George P.},
+author = {Raptakis, Michail and Moutzouri, Stavroula and Giannaros, Christos and Kechagia, Anastasia and Simantiraki, Olympia and Angelakis, Alexandros and Stylianou, Yannis and Kafentzis, George P. and Pantazis, Yannis},
 title = {{STOMA}: A Multi-Speaker Greek Speech Corpus},
 journal = {Language Resources and Evaluation},
 publisher = {Springer},
