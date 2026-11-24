@@ -492,7 +492,15 @@ If you would like access to our pretrained models, please contact us.
 - **Alexandros Angelakis** - angelakis@csd.uoc.gr (University of Crete, IACM-FORTH)
 
 ## Citation
-TBA
+```bibtex
+@article{raptakis2026stoma,
+author = {Raptakis, Michail and Mountzouri, Stavroula and Giannaros, Christos and Kechagia, Anastasia and Simantiraki, Olympia and Angelakis, Alexandros and Pantazis, Yannis and Kafentzis, George P.},
+title = {{STOMA}: A Multi-Speaker Greek Speech Corpus},
+journal = {Language Resources and Evaluation},
+publisher = {Springer},
+year = {2026}
+}
+``` 
 
 ## Licence
 
